@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* カスタムスタイル */
+.code-line {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.code-line:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.code-line.selected {
+  background-color: rgba(59, 130, 246, 0.2);
+}
+
+.upload-area {
+  border: 2px dashed #d1d5db;
+  transition: all 0.3s ease;
+}
+
+.upload-area.dragover {
+  border-color: #3b82f6;
+  background-color: rgba(59, 130, 246, 0.05);
+}
