@@ -20,7 +20,8 @@ export default function Home() {
     setError(null)
     
     try {
-      const response = await fetch('https://YOUR_N8N_WEBHOOK_URL', {
+      const apiUrl = process.env.NEXT_PUBLIC_N8N_WEBHOOK_URL || 'https://YOUR_N8N_WEBHOOK_URL'
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
